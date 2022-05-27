@@ -9,7 +9,7 @@ import Vue from 'vue'
 
 // 挂载全局异步请求方法
 // 法一： 缺点，每次添加新变量就必须手动添加
-// import {$http, $get, $post} form 'utils/require.js'
+// import {$http, $get, $post} from 'utils/require.js'
 // Vue.prototype.$http = $http
 // Vue.prototype.$get = $get
 // Vue.prototype.post = $post
@@ -22,7 +22,8 @@ import Vue from 'vue'
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({
-    ...App
+    ...App,
+	store
 })
 app.$mount()
 // #endif
